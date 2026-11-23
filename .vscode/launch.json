@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch Web Server",
+            "mainClass": "io.github.zyrouge.kafka_example.web_server.Application",
+        },
+        {
+            "type": "java",
+            "request": "launch",
+            "name": "Launch Worker",
+            "mainClass": "io.github.zyrouge.kafka_example.worker.Application",
+        },
+    ]
+}

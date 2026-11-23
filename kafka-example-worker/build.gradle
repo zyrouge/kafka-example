@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation libs.kafka.clients
+    implementation project(':kafka-example-shared')
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(libs.versions.java.get())
+    }
+}
+
+application {
+    mainClass = 'io.github.zyrouge.kafka_example.worker.Application'
+}

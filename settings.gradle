@@ -1,0 +1,6 @@
+rootProject.name = 'kafka-example'
+include('kafka-example-web-server', 'kafka-example-worker', 'kafka-example-shared')
+
+project(':kafka-example-web-server')
+project(':kafka-example-worker')
+project(':kafka-example-shared')

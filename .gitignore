@@ -1,0 +1,13 @@
+.gradle
+**/build/
+!**/src/**/build/
+**/bin/
+!**/src/**/bin/
+**/out/
+!**/src/**/out/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+.gradletasknamecache
+.project
+.classpath

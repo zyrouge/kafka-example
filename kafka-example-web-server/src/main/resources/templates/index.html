@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kafka Example</title>
+</head>
+
+<body>
+    <div>
+        <h1>Kafka Example</h1>
+        <div>
+            <p>Lorem Counter</p>
+            <button onclick="incrementCounter('lorem')">+1</button>
+            <button onclick="incrementCounter('lorem', 10)">+10</button>
+            <button onclick="incrementCounter('lorem', 100)">+100</button>
+        </div>
+        <div>
+            <p>Ipsum Counter</p>
+            <button onclick="incrementCounter('ipsum')">+1</button>
+            <button onclick="incrementCounter('ipsum', 10)">+10</button>
+            <button onclick="incrementCounter('ipsum', 100)">+100</button>
+        </div>
+    </div>
+
+    <script>
+        async function incrementCounter(topic, count = 1) {
+            const response = await fetch(`/api/counter/increment?topic=${topic}&count=${count}`, { method: 'POST' });
+            const data = await response.json();
+            console.log(`Counter for ${topic} incremented:`, data);
+        }
+    </script>
+</body>
+
+</html>
